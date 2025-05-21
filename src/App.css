@@ -1,0 +1,6 @@
+/* Custom styles that extend Tailwind */
+.gradient-text {
+  @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+}
+
+/* Any additional custom styles that can't be handled by Tailwind classes */
