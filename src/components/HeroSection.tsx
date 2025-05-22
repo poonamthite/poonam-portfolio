@@ -113,7 +113,7 @@ const HeroSection = () => {
             </a>
           </motion.div>
         </div>
-        <div className="flex-1 flex justify-center items-center min-h-[400px]">
+        <div className="hidden md:flex flex-1 flex justify-center items-center min-h-[400px]">
           <img
             src="/images/profile/profile.png"
             alt="profile"

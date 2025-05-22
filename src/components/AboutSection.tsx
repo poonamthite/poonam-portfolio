@@ -17,7 +17,7 @@ const AboutSection = () => {
 
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <motion.div
-            className="md:w-2/5"
+            className="md:w-2/5 hidden md:flex"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
