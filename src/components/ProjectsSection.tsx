@@ -73,16 +73,16 @@ const ProjectsSection = () => {
       image: "🚀",
     },
     {
-      title: "Responsive Dashboard Redesign",
+      title: "Responsive Redesign of various pages",
       description:
-        "Redesigned customer dashboard for HostGator India, improving user retention and reducing support tickets by 25%.",
+        "Redesigned landing pages for HostGator/ BigRock India, improving user retention and reducing support tickets by 25%. Making post purchase flow seamless on mobile",
       tags: ["UI/UX", "Responsive Design", "React", "Bootstrap"],
       image: "📱",
     },
     {
       title: "Analytics Integration",
       description:
-        "Implemented comprehensive analytics tracking across ResellerClub India, providing valuable insights for business decisions.",
+        "Implemented comprehensive analytics tracking across HostGator/ BigRock India, providing valuable insights for business decisions.",
       tags: ["Google Analytics", "Data Tracking", "JavaScript"],
       image: "📈",
     },

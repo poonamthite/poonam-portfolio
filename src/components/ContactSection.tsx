@@ -1,52 +1,6 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-const API_URL = "http://localhost:5000/api/contact";
+
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const res = await fetch(API_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (res.ok) {
-        setIsSubmitting(false);
-        setSubmitSuccess(true);
-        setFormData({ name: "", email: "", message: "" });
-        setTimeout(() => setSubmitSuccess(false), 5000);
-      } else {
-        throw new Error("Failed to send message");
-      }
-    } catch (error) {
-      setIsSubmitting(false);
-      alert("Failed to send message. Please try again.");
-      console.error("Backend error:", error);
-    }
-  };
-
   return (
     <section id="contact" className="section">
       <div className="container mx-auto">
@@ -65,9 +19,10 @@ const ContactSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-6 gap-12">
           <motion.div
-            className="space-y-6"
+            className="flex space-y-6"
+            style={{ justifyContent: "space-around" }}
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -193,89 +148,6 @@ const ContactSection = () => {
                 </a>
               </div>
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <form onSubmit={handleSubmit} className="card">
-              <div className="mb-4">
-                <label
-                  htmlFor="name"
-                  className="block text-gray-700 font-medium mb-2"
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-refined focus:outline-none focus:ring-2 focus:ring-primary-500"
-                  required
-                />
-              </div>
-
-              <div className="mb-4">
-                <label
-                  htmlFor="email"
-                  className="block text-gray-700 font-medium mb-2"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-refined focus:outline-none focus:ring-2 focus:ring-primary-500"
-                  required
-                />
-              </div>
-
-              <div className="mb-6">
-                <label
-                  htmlFor="message"
-                  className="block text-gray-700 font-medium mb-2"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-refined focus:outline-none focus:ring-2 focus:ring-primary-500"
-                  required
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={`w-full btn ${
-                  isSubmitting ? "bg-gray-400" : "btn-primary"
-                }`}
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </button>
-
-              {submitSuccess && (
-                <motion.div
-                  className="mt-4 p-3 bg-green-50 text-green-700 rounded-refined"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                >
-                  Thank you for your message! I'll get back to you soon.
-                </motion.div>
-              )}
-            </form>
           </motion.div>
         </div>
       </div>
