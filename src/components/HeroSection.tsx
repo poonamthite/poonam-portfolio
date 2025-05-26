@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-primary-50 via-white to-secondary-50 overflow-hidden py-10">
+    <section className="relative min-h-auto flex items-start bg-gradient-to-br from-primary-50 via-white to-secondary-50 overflow-hidden py-10">
       <div className="container mx-auto px-6 pt-10 relative z-10 flex flex-col md:flex-row items-center gap-8">
         <div className="max-w-3xl mx-auto md:mx-0 flex-1">
           <motion.div
@@ -13,9 +13,9 @@ const HeroSection = () => {
             <span className="text-primary-600 font-medium mb-2 block">
               Hello, I'm
             </span>
-            <h1 className="mb-4 bg-gradient-to-r from-primary-700 to-secondary-600 bg-clip-text text-transparent">
+            {/* <h1 className="mb-4 bg-gradient-to-r from-primary-700 to-secondary-600 bg-clip-text text-transparent">
               Poonam Bomble
-            </h1>
+            </h1> */}
             <h2 className="text-2xl md:text-3xl text-gray-700 mb-6">
               Senior Software Engineer
             </h2>

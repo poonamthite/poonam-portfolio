@@ -21,7 +21,7 @@ const ContactSection = () => {
 
         <div className="grid md:grid-cols-6 gap-12">
           <motion.div
-            className="flex space-y-6"
+            className="flex space-y-6 contact-me"
             style={{ justifyContent: "space-around" }}
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -29,7 +29,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
           >
             <div>
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
+              <h3 className="text-xl font-semibold mb-4 flex items-center contact-heading">
                 <span className="text-primary-600 mr-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -56,8 +56,8 @@ const ContactSection = () => {
               </a>
             </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
+            <div className="middle-contact-section">
+              <h3 className="text-xl font-semibold mb-4 flex items-center contact-heading">
                 <span className="text-primary-600 mr-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ const ContactSection = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
+              <h3 className="text-xl font-semibold mb-4 flex items-center contact-heading">
                 <span className="text-primary-600 mr-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
