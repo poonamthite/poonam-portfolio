@@ -7,6 +7,7 @@ import SkillsSection from "./components/SkillsSection";
 import ExperienceSection from "./components/ExperienceSection";
 import BrandsSection from "./components/BrandsSection";
 import EducationAwardsSection from "./components/EducationAwardsSection";
+import CertificatesSection from "./components/CertificatesSection.tsx";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
@@ -57,6 +58,7 @@ function App() {
                   <ExperienceSection />
                   <BrandsSection />
                   <EducationAwardsSection />
+                  <CertificatesSection />
                   <ProjectsSection />
                   <ContactSection />
                 </>

@@ -46,7 +46,7 @@ const Navbar = () => {
         
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          {['About', 'Experience', 'Skills', 'Projects', 'Contact'].map((item) => (
+          {['About', 'Experience', 'Skills', 'Certificates', 'Projects', 'Contact'].map((item) => (
             <a 
               key={item} 
               href={`#${item.toLowerCase()}`} 
@@ -75,7 +75,7 @@ const Navbar = () => {
           exit={{ opacity: 0, height: 0 }}
         >
           <div className="flex flex-col space-y-4">
-            {['About', 'Experience', 'Skills', 'Projects', 'Contact'].map((item) => (
+            {['About', 'Experience', 'Skills', 'Certificates', 'Projects', 'Contact'].map((item) => (
               <a 
                 key={item} 
                 href={`#${item.toLowerCase()}`}
